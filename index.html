@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Booking Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">ESN Hotel</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>
+        <span id="typed-text"></span>
+        <span class="cursor">|</span>
+      </h1>
+      <p>Your perfect stay awaits.</p>
+      <form id="search-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="checkin">Check-in</label>
+          <input type="date" id="checkin" name="checkin" required />
+        </div>
+
+        <div class="form-group">
+          <label for="checkout">Check-out</label>
+          <input type="date" id="checkout" name="checkout" required />
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Guests</label>
+          <input type="number" id="guests" name="guests" min="1" value="1" required />
+        </div>
+
+        <div class="form-group">
+          <label for="room">Room Type</label>
+          <select id="room" name="room" required>
+            <option value="">-- Select Room --</option>
+            <option value="Deluxe Room">Deluxe Room</option>
+            <option value="Superior Room">Superior Room</option>
+            <option value="Family Suite">Family Suite</option>
+            <option value="Honeymoon Suite">Honeymoon Suite</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <button type="submit">Search Rooms</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rooms Section -->
+  <section id="rooms" class="rooms">
+    <h2>Available Rooms</h2>
+    <p class="subtitle">Find the perfect room that fits your needs</p>
+    <div class="room-cards">
+      <!-- Room Card 1 -->
+      <div class="card">
+        <img src="19-3923.png" alt="Deluxe Room" />
+        <div class="card-content">
+          <h3>Deluxe Room</h3>
+          <div class="room-price">1000₺ / night</div>
+          <div class="room-rating">★★★★☆</div>
+          <div class="room-availability" id="availability-deluxe"></div>
+          <div class="card-actions">
+            <button class="book-now">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Room Card 2 -->
+      <div class="card">
+        <img src="superior-sea-king-1_wide.jpg" alt="Superior Room" />
+        <div class="card-content">
+          <h3>Superior Room</h3>
+          <div class="room-price">1500₺ / night</div>
+          <div class="room-rating">★★★★☆</div>
+          <div class="room-availability" id="availability-superior"></div>
+          <div class="card-actions">
+            <button class="book-now">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Room Card 3 -->
+      <div class="card">
+        <img src="Lazzoni-Hotel-Oda-423-02.jpeg" alt="Family Suite" />
+        <div class="card-content">
+          <h3>Family Suite</h3>
+          <div class="room-price">3000₺ / night</div>
+          <div class="room-rating">★★★★★</div>
+          <div class="room-availability" id="availability-family"></div>
+          <div class="card-actions">
+            <button class="book-now">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Room Card 4 -->
+      <div class="card">
+        <img src="4uw2gBys7qkGisI3kItb.jpg" alt="Honeymoon Suite" />
+        <div class="card-content">
+          <h3>Honeymoon Suite</h3>
+          <div class="room-price">7500₺ / night</div>
+          <div class="room-rating">★★★★★</div>
+          <div class="room-availability" id="availability-honeymoon"></div>
+          <div class="card-actions">
+            <button class="book-now">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about enhanced-section">
+    <h2>About Us</h2>
+    <p class="section-subtitle">Delivering comfort and class since 1995</p>
+    <div class="about-grid">
+      <div class="about-item">
+        🏨 <h3>Luxury Rooms</h3>
+        <p>Designed with elegance, comfort, and modern finishes to elevate your stay.</p>
+      </div>
+      <div class="about-item">
+        💼 <h3>Professional Staff</h3>
+        <p>Our team is available 24/7 to ensure your experience is flawless.</p>
+      </div>
+      <div class="about-item">
+        🍽️ <h3>Fine Dining</h3>
+        <p>World-class chefs prepare gourmet meals with local and international flavor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact enhanced-section">
+    <h2>Contact Us</h2>
+    <p class="section-subtitle">We're here to help you 24/7</p>
+    <div class="contact-info">
+      <div class="contact-item">
+        📧 <strong>Email:</strong> info@hotelbooking.com
+      </div>
+      <div class="contact-item">
+        📞 <strong>Phone:</strong> +90 531 999 99 99
+      </div>
+      <div class="contact-item">
+        📍 <strong>Address:</strong> 123 ESN Street, Istanbul, Turkey
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HotelBooking. All rights reserved.</p>
+  </footer>
+
+  <!-- 1) Load EmailJS globally -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- 2) Load your main script as a module -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
